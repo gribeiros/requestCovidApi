@@ -17,12 +17,13 @@ app.get('/global', (req, res) => {
         });
 });
 
+
 app.get('/confirmed', (req, res) => {
     axios.get('https://covid19.mathdro.id/api/confirmed')
         .then(function (response) {
 
             res.send(response.data.sort(function (obj1, obj2) {
-                return obj2.confirmed - obj1.confirmed;
+                return obj1.confirmed - obj2.confirmed;
             }));
         })
         .catch(function (error) {
@@ -30,13 +31,12 @@ app.get('/confirmed', (req, res) => {
         });
 });
 
+
 app.get('/daily', (req, res) => {
     axios.get('https://covid19.mathdro.id/api/daily')
         .then(function (response) {
 
-            res.send(response.data.sort(function (obj1, obj2) {
-                return obj2.confirmed - obj1.confirmed;
-            }));
+            res.send(response.data);
         })
         .catch(function (error) {
             console.log(error)
@@ -61,7 +61,7 @@ app.get('/daily/:date', (req, res) => {
 app.get('/countries', (req, res) => {
     const { country } = req.params;
 
-    axios.get('https://covid19.mathdro.id/api/countries/' + country)
+    axios.get('https://covid19.mathdro.id/api/countries/')
         .then(function (response) {
             res.send(response.data);
         })
@@ -70,7 +70,7 @@ app.get('/countries', (req, res) => {
         });
 });
 
-app.get('/countries/:country', (req, res) => {
+app.get('/country/:country', (req, res) => {
     const { country } = req.params;
 
     axios.get('https://covid19.mathdro.id/api/countries/' + country)
