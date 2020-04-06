@@ -5,7 +5,7 @@ const axios = require('axios');
 //Altere para a porta que preferir. A url vai fica de acordo com a porta ex: localhost:8080
 const port = 8080;
 
-//
+
 app.get('/global', (req, res) => {
 
     axios.get('https://covid19.mathdro.id/api')
