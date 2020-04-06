@@ -1,0 +1,17 @@
+{
+  "name": "trabalho",
+  "version": "1.0.0",
+  "description": "Trabalho para a materia projeto e desenvolvimento de software, cosumir api´s",
+  "main": "index.js",
+  "repository": "https://github.com/gribeiros/requestCovidApi.git",
+  "scripts": {
+    "start":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gustavo Ribeiro Silva",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1"
+  }
+}
