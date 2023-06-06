@@ -2,7 +2,7 @@
 Trabalho, para matéria projeto e desenvolvimento de software, realizando request´s para uma api.
 
 
-## Necessaario para o rodar o projeto:
+## Necessário para o rodar o projeto:
 * NodesJs
 * Npm
 
